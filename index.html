@@ -1,108 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101827">
-  <meta name="description" content="PS4 Dakhla - متجر ألعاب وأجهزة وإكسسوارات PlayStation في الداخلة.">
-  <title>PS4 Dakhla | متجر بلايستيشن</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d1c">
+  <meta name="description" content="PS4 Dakhla - متجر وخدمات PlayStation 4 في الداخلة">
+  <title>PS4 Dakhla | متجر وخدمات PlayStation</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="#" aria-label="PS4 Dakhla">
-        <span class="brand-mark">PS</span>
-        <span>PS4 <b>DAKHLA</b><small>متجر الألعاب والإكسسوارات</small></span>
-      </a>
-      <nav>
-        <a href="#home">الرئيسية</a>
-        <a href="#products">منتجاتنا</a>
-        <a href="#about">من نحن</a>
-        <a href="#contact">اتصل بنا</a>
-      </nav>
-      <a class="nav-cta" href="https://wa.me/212777497771" target="_blank" rel="noopener">اطلب عبر واتساب</a>
-      <button class="menu-toggle" aria-label="فتح القائمة" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+  <main class="page-shell">
+    <header class="site-header">
+      <div class="brand-mark" aria-hidden="true">PS<span>4</span></div>
+      <div class="brand-copy">
+        <p class="eyebrow">PLAY • GAME • ENJOY</p>
+        <h1 id="msgs">PS4 Dakhla</h1>
+        <p class="tagline">متجرك لعالم PlayStation 4 في الداخلة</p>
+      </div>
+      <div class="header-chip">DAKHLA · MOROCCO</div>
+    </header>
+
+    <section class="intro">
+      <span class="section-kicker">PLAYSTATION 4</span>
+      <h2>اختر إصدار النظام الخاص بجهازك</h2>
+      <p>حدد إصدار Firmware المناسب للانتقال إلى الصفحة الخاصة به.</p>
+    </section>
+
+    <div id="menu">
+      <section class="firmware-panel" aria-label="اختيار إصدار النظام">
+        <div class="firmware-grid">
+          <button class="btn btn-multi" onmouseover="msgs.innerHTML='PS4 GoldHEN Host for 5.05 and 7.00 to 14.02 FW - (Auto Exploit Selection)'" onmouseout="msgs.innerHTML='PS4 Dakhla'" onclick="location.replace('g2all/index.html')">GoldHEN Multi FW</button>
+          <button class="btn" onmouseover="msgs.innerHTML='PS4 5.05 FW Host v2.5'" onmouseout="msgs.innerHTML='PS4 Dakhla'" onclick="location.replace('505/index.html')">5.05 FW v2.5</button>
+          <a href="672goldhen/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 6.72 FW GoldHEN Host'" onmouseout="msgs.innerHTML='PS4 Dakhla'">6.72 FW GoldHEN</button></a>
+          <a href="672/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 6.72 FW Host v3.0'" onmouseout="msgs.innerHTML='PS4 Dakhla'">6.72 FW v3.0</button></a>
+          <a href="900goldhen/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 9.00 FW GoldHEN Host - (FontFaceSet Webkit)'" onmouseout="msgs.innerHTML='PS4 Dakhla'">9.00 FW GoldHEN</button></a>
+          <a href="900v3/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 9.00 FW Host v3.0 - (FontFaceSet Webkit)'" onmouseout="msgs.innerHTML='PS4 Dakhla'">9.00 FW v3.0</button></a>
+          <button class="btn btn-restore" onmouseover="msgs.innerHTML='Restore a Host to User’s Guide without using DNS'" onmouseout="msgs.innerHTML='PS4 Dakhla'" onclick="location.replace('restore/index.html')">Restore Host</button>
+        </div>
+
+        <div class="support-area">
+          <p>تحتاج مساعدة أو تريد الاستفسار عن منتجات المتجر؟</p>
+          <a class="phone-link" href="https://wa.me/212777497771" target="_blank" rel="noopener">
+            <span class="whatsapp-icon">✆</span>
+            <span><small>واتساب / اتصال</small><strong dir="ltr">0777497771</strong></span>
+          </a>
+          <button class="btn btn-onln donation-button" onmouseover="msgs.innerHTML='If you like my work you can support me with a donation.'" onmouseout="msgs.innerHTML='PS4 Dakhla'" onclick="donations()">For Donations (Only in Cryptocurrencies)</button>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <p class="copyright">© <span id="year"></span> PS4 Dakhla. جميع الحقوق محفوظة.</p>
+        <p class="credits">تصميم وتنسيق المتجر بواسطة <strong>PS4 Dakhla</strong> · مع الشكر لجميع المطورين والمساهمين في مجتمع PS4.</p>
+      </footer>
     </div>
-  </header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-glow"></div>
-      <div class="container hero-content">
-        <div class="hero-copy">
-          <span class="eyebrow"><i></i> عالم PlayStation في الداخلة</span>
-          <h1>كل ما يحتاجه<br><em>عشّاق PS4</em></h1>
-          <p>ألعاب، أجهزة، أيدي تحكم وإكسسوارات الألعاب. اكتشف منتجاتنا وتواصل معنا مباشرة للاستفسار والطلب.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#products">اكتشف المنتجات <span>←</span></a>
-            <a class="btn btn-ghost" href="https://wa.me/212777497771" target="_blank" rel="noopener">تواصل معنا</a>
-          </div>
-          <div class="hero-note"><span>●</span> خدمة محلية في الداخلة — تواصل معنا لمعرفة التوفر</div>
-        </div>
-        <div class="hero-art" aria-label="تصميم متجر ألعاب">
-          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-          <div class="console"><div class="console-light"></div><div class="console-line"></div><span>PLAY</span></div>
-          <div class="floating-tag tag-top">GAME ON</div>
-          <div class="floating-tag tag-bottom">PS4 • DAKHLA</div>
-          <div class="cross">＋</div><div class="circle">○</div><div class="triangle">△</div><div class="square">□</div>
-        </div>
+    <section id="crypto" class="crypto-panel">
+      <div class="intro">
+        <span class="section-kicker">SUPPORT THE PROJECT</span>
+        <h2>طرق التبرع</h2>
+        <p>يمكنك دعم المشروع باستخدام العملات الرقمية.</p>
       </div>
-    </section>
-
-    <section class="benefits">
-      <div class="container benefit-grid">
-        <div><span class="benefit-icon">🎮</span><p><b>منتجات الألعاب</b><small>أجهزة وألعاب وإكسسوارات</small></p></div>
-        <div><span class="benefit-icon">📍</span><p><b>في الداخلة</b><small>متجر محلي قريب منك</small></p></div>
-        <div><span class="benefit-icon">💬</span><p><b>طلب مباشر</b><small>استفسر واطلب عبر واتساب</small></p></div>
+      <div class="crypto-grid">
+        <article class="crypto-card">
+          <h3>Donate with Bitcoin (BTC)</h3>
+          <img src="btc.jpg" width="150" height="150" alt="Bitcoin QR code">
+          <p class="wallet-address">bc1q6cnsykmvem6zgw8wag3ygee0jkhtxj6rkp2nrm</p>
+        </article>
+        <article class="crypto-card">
+          <h3>Donate with Ethereum (ETH)</h3>
+          <img src="eth.jpg" width="150" height="150" alt="Ethereum QR code">
+          <p class="wallet-address">0x7Ae1825ddE196925dB8B7832F436cA0eAeaF932c</p>
+        </article>
       </div>
-    </section>
-
-    <section class="products-section" id="products">
-      <div class="container">
-        <div class="section-heading">
-          <div><span class="eyebrow">تسوّق الآن</span><h2>منتجات <em>المتجر</em></h2></div>
-          <p>هذه أقسام مبدئية يمكنك تغييرها وإضافة صور وأسعار منتجاتك الحقيقية.</p>
-        </div>
-        <div class="product-grid">
-          <article class="product-card">
-            <div class="product-visual visual-console"><span class="product-symbol">PS4</span><span class="visual-caption">PLAYSTATION</span></div>
-            <div class="product-info"><span class="category">الأجهزة</span><h3>أجهزة PlayStation 4</h3><p>إصدارات وحالات مختلفة حسب المتوفر.</p><a class="order-link" href="https://wa.me/212777497771?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A3%D8%AC%D9%87%D8%B2%D8%A9%20PS4" target="_blank" rel="noopener">استفسر عن السعر <b>←</b></a></div>
-          </article>
-          <article class="product-card">
-            <div class="product-visual visual-game"><span class="game-disc">GAME</span><span class="visual-caption">YOUR NEXT ADVENTURE</span></div>
-            <div class="product-info"><span class="category">الألعاب</span><h3>ألعاب PS4</h3><p>ألعاب متنوعة لمحبي المغامرة والرياضة.</p><a class="order-link" href="https://wa.me/212777497771?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A3%D9%84%D8%B9%D8%A7%D8%A8%20PS4" target="_blank" rel="noopener">استفسر عن السعر <b>←</b></a></div>
-          </article>
-          <article class="product-card">
-            <div class="product-visual visual-pad"><span class="controller">⌖</span><span class="visual-caption">DUALSHOCK</span></div>
-            <div class="product-info"><span class="category">أيدي التحكم</span><h3>Manettes PS4</h3><p>أيدي تحكم وإكسسوارات اللعب.</p><a class="order-link" href="https://wa.me/212777497771?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A3%D9%8A%D8%AF%D9%8A%20%D8%A7%D9%84%D8%AA%D8%AD%D9%83%D9%85" target="_blank" rel="noopener">استفسر عن السعر <b>←</b></a></div>
-          </article>
-          <article class="product-card">
-            <div class="product-visual visual-accessory"><span class="headset">♫</span><span class="visual-caption">GAMING GEAR</span></div>
-            <div class="product-info"><span class="category">الإكسسوارات</span><h3>إكسسوارات الألعاب</h3><p>سماعات، كوابل ومستلزمات متنوعة.</p><a class="order-link" href="https://wa.me/212777497771?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A5%D9%83%D8%B3%D8%B3%D9%88%D8%A7%D8%B1%D8%A7%D8%AA%20%D8%A7%D9%84%D8%A3%D9%84%D8%B9%D8%A7%D8%A8" target="_blank" rel="noopener">استفسر عن السعر <b>←</b></a></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-section" id="about">
-      <div class="container about-box">
-        <div class="about-icon">✦</div>
-        <div><span class="eyebrow">PS4 DAKHLA</span><h2>وجهتك لعالم الألعاب</h2><p>نقدم لك مساحة سهلة للتعرف على منتجات المتجر. تواصل معنا لمعرفة الأسعار، توفر المنتجات، وطريقة الاستلام.</p></div>
-        <a class="btn btn-primary" href="https://wa.me/212777497771" target="_blank" rel="noopener">تحدث معنا</a>
-      </div>
-    </section>
-
-    <section class="contact-section" id="contact">
-      <div class="container contact-inner">
-        <div><span class="eyebrow">نحن هنا لمساعدتك</span><h2>هل تبحث عن لعبة أو جهاز؟</h2><p>راسلنا وسنجيبك عن المنتجات المتوفرة.</p></div>
-        <a class="phone-card" href="https://wa.me/212777497771" target="_blank" rel="noopener"><span>واتساب / الهاتف</span><strong dir="ltr">0777497771</strong><small>اضغط للتواصل مباشرة ←</small></a>
-      </div>
+      <button class="btn return-button" onclick="load_menu()">Return</button>
     </section>
   </main>
 
-  <footer><div class="container footer-inner"><a class="brand" href="#"><span class="brand-mark">PS</span><span>PS4 <b>DAKHLA</b></span></a><span>© <span id="year"></span> PS4 Dakhla — جميع الحقوق محفوظة</span><a href="https://wa.me/212777497771" target="_blank" rel="noopener">واتساب: 0777497771</a></div></footer>
-  <a class="whatsapp-float" href="https://wa.me/212777497771" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">☏</a>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    function donations() {
+      document.getElementById("crypto").style.display = "block";
+      document.getElementById("menu").style.display = "none";
+    }
+
+    function load_menu() {
+      document.getElementById("menu").style.display = "block";
+      document.getElementById("crypto").style.display = "none";
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
